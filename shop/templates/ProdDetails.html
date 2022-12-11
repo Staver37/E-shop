@@ -1,0 +1,43 @@
+{%extends 'layout.html'%}
+
+{%block header%}
+        <img src="/static/logo.png">
+        <a href="/">Shop</a>
+        <a href="/products">Products</a>
+        <a href="/cart">Cart({{bag_items_count}})</a>
+        
+        {%endblock%}
+        
+        
+        
+        {%block content%}
+        <hr>
+        <article class="">
+            
+                <img style="width:300px;height:400px"  src="{{product.image}}"/>
+             
+                <h2>   
+                {{products.name}}
+                </h2>
+            <p>
+                 {{products.description}}
+            </p>
+
+            <p>
+                 {{product.price.amount}} {{" "}} {{product.price.currency}}
+            </p>
+
+            <div class="btn-wrapper">
+                <a href="/buy?pid={{product.id}}" class="product-buy-btn"> BUY </a>
+            </div>
+
+        </article>
+        <hr>
+{%endblock%}
+
+
+
+
+
+
+
