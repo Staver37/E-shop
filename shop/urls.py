@@ -1,8 +1,10 @@
 from django.urls import path
 from .views import *
 
+from django.conf.urls.static import static
+
 import django.views.static import serve
-import django.conf.urls import url
+import django.conf.urls    import url
 # list of app routes
 urlpatterns = [
     path('',homePage),
@@ -27,6 +29,7 @@ urlpatterns = [
     path('admin/product/add/form', addProductForm),
     path('admin/product/add/submit', saveProduct),
 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve, {'document_root':  settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root':  settings.STATIC_ROOT}), 
 ]
+urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c1l2a!6_%yfxp51*28f3g%s5avc--eyp&9lqj_xhu5^^4-00_e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','webad-app.herokuapp.com/']
 
 
 
